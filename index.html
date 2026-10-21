@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cat Maze Games</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+  :root { --night: #0b1622; --panel: #13232f; --line: #27424f; --sand: #f3e3c3; --fog: #8ea7b0; --gold: #ffcf5a; color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: var(--night); color: var(--sand); font: 15px/1.5 'IBM Plex Mono', ui-monospace, monospace;
+         display: grid; place-items: center; padding: 32px max(16px, env(safe-area-inset-left, 0px)); }
+  main { max-width: 640px; width: 100%; display: grid; gap: 20px; }
+  h1 { font: 400 clamp(28px, 7vw, 44px)/1 'Bungee', Impact, sans-serif; color: var(--gold); margin: 0; }
+  p { margin: 0; color: var(--fog); }
+  .games { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  a.game { display: grid; gap: 6px; padding: 18px; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); color: inherit; text-decoration: none; }
+  a.game:hover, a.game:focus-visible { border-color: var(--gold); outline: none; }
+  a.game b { font: 400 22px/1.1 'Bungee', Impact, sans-serif; }
+  .rhys b { color: #7fd1a0; } .magnus b { color: #ff7a59; }
+</style>
+<main>
+  <h1>Cat Maze Games</h1>
+  <p>Pac-Man style games starring two orange cats. Arrow keys or WASD on a computer, swipe on a phone.</p>
+  <div class="games">
+    <a class="game rhys" href="rhys/"><b>Rhys in PDX</b><span>Eat Churu treats around downtown Portland, dodge the rain clouds, and grab a Baby Doll Pizza slice to drive the RAV4.</span></a>
+    <a class="game magnus" href="magnus/"><b>Magnus in PB</b><span>Eat shrimp across Pacific Beach, San Diego, dodge the vacuum cleaners, and grab a burrito to fight back.</span></a>
+  </div>
+</main>
+</html>
